@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空洞骑士资源站 - 终极版</title>
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --light: #f8f1f1;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', system-ui;
+            background: linear-gradient(45deg, #f3f9ff, #e6f4fd);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 2.5rem 1rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            padding: 1.8rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .btn {
+            background: linear-gradient(45deg, var(--accent), #ff6b81);
+            color: white;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem 0;
+            transition: opacity 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .stats {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        footer {
+            background: var(--primary);
+            color: var(--light);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .qrcode {
+            width: 150px;
+            height: 150px;
+            margin: 1rem auto;
+            display: block;
+            border: 5px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .card-container, .video-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🎮 空洞骑士资源站</h1>
+        <p>全网最强资源整合 | 高速下载 | 视频教程</p>
+    </header>
+
+    <!-- 网盘下载区 -->
+    <section class="card-container">
+        <div class="card">
+            <h3>🚀 官方最新版</h3>
+            <p>天翼云盘 | 密码: 8x7a</p>
+            <a href="https://cloud.189.cn/t/7r2Y3y3Y3Z3m2Z" class="btn" target="_blank">立即下载</a>
+        </div>
+        <div class="card">
+            <h3>💎 全DLC典藏版</h3>
+            <p>百度网盘 | 提取码: hk2024</p>
+            <a href="https://pan.baidu.com/s/1pEQ3yR7sXz7Y6rY3jQ" class="btn" target="_blank">百度网盘</a>
+        </div>
+        <div class="card">
+            <h3>📱 手机专享版</h3>
+            <p>夸克网盘 | 扫码下载</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://pan.quark.cn/s/6d3e2f1a4b5c" class="qrcode">
+        </div>
+        <div class="card">
+            <h3>⚡ 高速下载通道</h3>
+            <p>迅雷云盘 | 高速通道</p>
+            <a href="https://pan.xunlei.com/s/VM7s1zLrj9x" class="btn" target="_blank">迅雷下载</a>
+        </div>
+    </section>
+
+    <!-- 视频区 -->
+    <section class="video-grid">
+        <div class="card">
+            <h4>📹 完整通关攻略</h4>
+            <div class="video-container">
+                <iframe src="https://player.bilibili.com/player.html?aid=228231170&bvid=BV1at4y1V7xq&cid=215516433" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="card">
+            <h4>⚔️ 速通技巧教学</h4>
+            <div class="video-container">
+                <iframe src="https://player.bilibili.com/player.html?aid=384637370&bvid=BV1bK4y1C7wX&cid=351456890" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="card">
+            <h4>🎮 隐藏剧情解析</h4>
+            <div class="video-container">
+                <iframe src="https://player.bilibili.com/player.html?aid=628910412&bvid=BV1Cb4y1V7X2&cid=467284348" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载统计 -->
+    <div class="stats">
+        <h3>📊 资源下载统计</h3>
+        <p id="download-stats">总下载次数: <span id="total-count">0</span></p>
+    </div>
+
+    <footer>
+        <p>© 2025 空洞骑士资源站 | 持续更新中...</p>
+        <p>提示: 下载后建议验证文件MD5: a1b2c3d4e5</p>
+    </footer>
+
+    <script>
+        // 下载统计功能
+        const downloadCounts = {
+            'download1': 0,
+            'download2': 0,
+            'download3': 0,
+            'download4': 0
+        };
+
+        // 初始化统计
+        if (!localStorage.getItem('hk-downloads')) {
+            localStorage.setItem('hk-downloads', JSON.stringify(downloadCounts));
+        }
+
+        // 更新统计显示
+        function updateStats() {
+            const stats = JSON.parse(localStorage.getItem('hk-downloads'));
+            const total = Object.values(stats).reduce((a, b) => a + b, 0);
+            document.getElementById('total-count').textContent = total;
+        }
+
+        // 下载按钮点击事件
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const id = this.parentElement.classList.contains('card') ? 
+                    this.parentElement.querySelector('h3').textContent : 'unknown';
+                
+                const stats = JSON.parse(localStorage.getItem('hk-downloads'));
+                stats[id] = (stats[id] || 0) + 1;
+                localStorage.setItem('hk-downloads', JSON.stringify(stats));
+                
+                setTimeout(updateStats, 100);
+            });
+        });
+
+        // 初始化统计显示
+        updateStats();
+    </script>
+</body>
+</html>
+
+
